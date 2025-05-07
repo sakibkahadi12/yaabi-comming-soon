@@ -1,103 +1,59 @@
 import Image from "next/image";
-
+import logo from '../../public/logo/logo.png'
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import { hanken, mulish } from "./layout";
+import { Hanken_Grotesk } from "next/font/google";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <main
+      className={`container mx-auto bg-[url('/logo/bg.jpg')]  h-screen bg-cover bg-center flex flex-col  items-center w-full ${mulish.className}`}
+    >
+      <Image
+        src={logo}
+        alt="logo"
+        height={1000}
+        width={1000}
+        className=" w-[240px] h-[100px]  lg:w-[332px] mt-10 lg:h-[143px]"
+      />
+      <div className=" lg:w-[50%] text-center mx-auto mt-10 lg:mt-5 mb-20 lg:mb-16">
+        <h1 className="text-5xl lg:text-[60px] p-[10px] font-[700] text-[#000000] leading-[48px] lg:leading-[70px]">
+          Ny nettside lanseres snart
+          <span className="inline-flex mt-2 px-2 items-center rounded-full size-[40px] bg-[#154D7E]  ml-3">
+            <FaArrowRight
+              size={15}
+              color="#D8E6F3"
+              className="w-full -rotate-45 h-full  flex items-center justify-center"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </span>
+        </h1>
+        <p className=" text-[15px] lg:text-[20px] px-4 mt-6 text-[#000000] font-[400] ">
+          Én plattform. Uendelige muligheter. <br /> Bygg sterke kundeforhold
+          med målrettede nyhetsbrev, personlige <br /> SMS-er og effektive
+          digitale kuponger.
+        </p>
+      </div>
+      <div>
+        <Link href={"https://yaabi.io/login"}>
+          <button
+            className={`${hanken.className} w-[188px] h-[50px] rounded-[5px] bg-[#154D7E] text-[#ffffff] text-[15px] font-[500] mb-2 lg:mb-7`}
           >
-            Read our docs
-          </a>
+            Login
+          </button>{" "}
+        </Link>
+
+        <div className="text-[#000000] text-center font-[400] flex flex-col text-[20px]">
+          <p>Want to reach out?</p>
+          <p className="font-[700] ">
+            <a
+              href="mailto:post@yaabi.no"
+              className="text-[#000000] no-underline"
+            >
+              post@yaabi.no
+            </a>
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
