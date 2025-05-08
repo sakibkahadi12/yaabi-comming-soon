@@ -7,16 +7,16 @@ import { Hanken_Grotesk } from "next/font/google";
 export default function Home() {
   return (
     <main
-      className={`container mx-auto bg-[url('/logo/bg.jpg')]  h-screen bg-cover bg-center flex flex-col  items-center w-full ${mulish.className}`}
+      className={`container mx-auto bg-[url('/logo/bg.jpg')]  min-h-screen bg-cover bg-center flex flex-col  items-center w-full ${mulish.className}`}
     >
       <Image
         src={logo}
         alt="logo"
         height={1000}
         width={1000}
-        className=" w-[240px] h-[100px]  lg:w-[332px] mt-10 lg:h-[143px]"
+        className=" w-[240px] h-[100px]  lg:w-[332px] mt-5 lg:h-[143px]"
       />
-      <div className=" lg:w-[50%] text-center mx-auto mt-10 lg:mt-5 mb-20 lg:mb-16">
+      <div className=" lg:w-[50%] text-center mx-auto mt-10 lg:mt-2 resize-margin">
         <h1 className="text-5xl lg:text-[60px] p-[10px] font-[700] text-[#000000] leading-[48px] lg:leading-[70px]">
           Ny nettside lanseres snart
           <span className="inline-flex mt-2 px-2 items-center rounded-full size-[40px] bg-[#154D7E]  ml-3">
